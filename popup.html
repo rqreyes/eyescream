@@ -2,17 +2,31 @@
 <html>
 <head>
   <title>EyeScream</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap">
   <link rel="stylesheet" href="style/popup.css">
 </head>
 <body>
   <main>
-    <a href="#" id="secret"><h1>EyeScream</h1></a>
+    <a href="#" id="secret"><h1><span class="eye">Eye</span><span>Scream</span></h1></a>
     <p>version 1.0</p>
     <section class="night-day">
-        <button id="night">Night</button>
-        <button id="day">Day</button>
+        <button id="night"><i class="fa fa-moon"></i></button>
+        <button id="day"><i class="fa fa-sun"></i></button>
     </section>
-    <p>By Randy and Darren</p>
+    <section class="disappear-chalkduster">
+        <button id="disappear">Disappear</button>
+        <button id="chalkduster">Chalkduster</button>
+    </section>
+    <section class="upside-down-rotate">
+        <button id="upside-down">Upside-down</button>
+        <button id="rotate">Rotate</button>
+    </section>
+    <section class="random-party">
+        <button id="random">Random</button>
+        <button id="party"></button>
+    </section>
+    <p class="authors">By Randy and Darren</p>
   </main>
 
   <script src="script/jquery-3.4.1.min.js"></script>

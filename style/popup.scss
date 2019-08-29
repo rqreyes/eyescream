@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background: #ccc;
-  border: 1px solid #000;
   padding: 20px;
   margin: 0;
 }
@@ -20,27 +17,44 @@ p {
   color: #222;
 }
 
+.eye {
+  color: #ab3c3c;
+}
+
+.eye {
+  color: orangered;
+}
+
 #secret {
   text-decoration: none;
 }
 
-.night-day {
+section {
   display: flex;
   justify-content: space-evenly;
 }
 
 button {
+  flex: 1 0 50%;
+  width: 140px;
   font-size: 16px;
   border: 0;
   border-radius: 5px;
-  padding: 20px 40px;
-  margin: 0 5px;
+  box-shadow: 0 6px grey;
+  padding: 20px 0;
+  margin: 8px 5px;
   position: relative;
   cursor: pointer;
 
   &:hover {
     top: 2px;
+    box-shadow: 0 4px grey;
   }
+}
+
+#night, #day {
+  font-size: 35px;
+  padding: 10px 0;
 }
 
 #night {
@@ -54,11 +68,56 @@ button {
 }
 
 #day {
-  background: #fff;
-  color: grey;
-  box-shadow: 0 6px gray;
+  color: #fff;
+  background: skyblue;
+}
+
+#disappear {
+  transition: 0.4s;
 
   &:hover {
-    box-shadow: 0 4px gray;
+    letter-spacing: 10px;
+    color: rgba(0, 0, 0, 0);
   }
+}
+
+#chalkduster {
+  font-family: Chalkduster, fantasy;
+}
+
+#upside-down {
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+#rotate {
+  transition: 1s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+#random {
+  transition: 0.4s;
+
+  &:hover {
+    color: greenyellow;
+    background: navy;
+  }
+}
+
+#party {
+  background: #000 url(../img/party.png) no-repeat center;
+  background-size: 36%;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: purple;
+  }
+}
+
+.authors {
+  margin: 20px 0 0;
 }
