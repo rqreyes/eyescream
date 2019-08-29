@@ -8,11 +8,13 @@
     // "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  // "permissions": [
+  //   "activeTab"
+  // ],
   "content_scripts": [{
     "matches": ["<all_urls>"],
-    // "matches": ["https://www.youtube.com/*"],
     "css": ["style/content.css"],
-    "js": ["script/jquery-3.4.1.min.js", "script/popup.js"]
-    // "js": ["script/script.js"]
+    "js": ["script/jquery-3.4.1.min.js", "script/content.js"]
+    // "js": ["script/content.js"]
   }]
 }
