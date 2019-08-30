@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -25,6 +29,10 @@ p {
   color: orangered;
 }
 
+.logo {
+  width: 100px;
+}
+
 #secret {
   text-decoration: none;
 }
@@ -36,12 +44,15 @@ section {
 
 button {
   flex: 1 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 140px;
+  height: 60px;
   font-size: 16px;
   border: 0;
   border-radius: 5px;
   box-shadow: 0 6px grey;
-  padding: 20px 0;
   margin: 8px 5px;
   position: relative;
   cursor: pointer;
@@ -81,8 +92,10 @@ button {
   }
 }
 
-#chalkduster {
-  font-family: Chalkduster, fantasy;
+#fonts {
+  &:hover {
+    font-family: Chalkduster;
+  }
 }
 
 #upside-down {
@@ -109,13 +122,17 @@ button {
 }
 
 #party {
-  background: #000 url(../img/party.png) no-repeat center;
+  background: teal url(../img/party.png) no-repeat center;
   background-size: 36%;
   transition: 0.4s;
 
   &:hover {
     background-color: purple;
   }
+}
+
+#reset {
+  flex: 1 0 310px;
 }
 
 .authors {

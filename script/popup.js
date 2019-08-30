@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  let audio = new Audio('https://iringtone.net/rington/file?id=8454&type=sound&name=mp3'); 
+
   $('#secret').on('click', function(e) {
     e.preventDefault();
     chrome.tabs.query({currentWindow: true, active: true},
@@ -24,10 +26,10 @@ $(document).ready(function() {
         chrome.tabs.sendMessage(tabs[0].id, 'disappear')
       })
   });
-  $('#chalkduster').on('click', function() {
+  $('#fonts').on('click', function() {
     chrome.tabs.query({currentWindow: true, active: true},
       function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, 'chalkduster')
+        chrome.tabs.sendMessage(tabs[0].id, 'fonts')
       })
   });
   $('#upside-down').on('click', function() {
@@ -49,11 +51,18 @@ $(document).ready(function() {
       })
   });
   $('#party').on('click', function() {
-    let audio = new Audio('https://iringtone.net/rington/file?id=8454&type=sound&name=mp3'); 
     audio.play();
     chrome.tabs.query({currentWindow: true, active: true},
       function(tabs) {
         chrome.tabs.sendMessage(tabs[0].id, 'party')
+      })
+  });
+  $('#reset').on('click', function() {
+    audio.pause();
+    audio.currentTime = 0;
+    chrome.tabs.query({currentWindow: true, active: true},
+      function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, 'reset')
       })
   });
 });

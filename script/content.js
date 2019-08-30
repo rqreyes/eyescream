@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(function(message) {
     $('body').css('background', 'url(https://avatars3.githubusercontent.com/u/6164474?s=460&v=4)');
   }
   if (message === 'night') {
-    $('*').css('background', '#000');
+    $('*').css('background-color', '#000');
     $('h1').css('color', 'grey');
     $('h2').css('color', 'grey');
     $('h3').css('color', 'grey');
@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener(function(message) {
     $('a').css('color', 'gold');
   }
   if (message === 'day') {
-    $('*').css('background', '#fff');
+    $('*').css('background-color', '#fff');
     $('h1').css('color', 'grey');
     $('h2').css('color', 'grey');
     $('h3').css('color', 'grey');
@@ -38,8 +38,10 @@ chrome.runtime.onMessage.addListener(function(message) {
   if (message === 'disappear') {
     $('*').css('color', 'rgba(0, 0, 0, 0)');
   }
-  if (message === 'chalkduster') {
-    $('*').css('font-family', "chalkduster");
+  if (message === 'fonts') {
+    const fonts = ['Impact', 'Luminari', 'Chalkduster', 'Stencil Std', 'Marker Felt', 'Trattatello'];
+
+    $('*').css('font-family', fonts[Math.floor(Math.random() * 6)]);
   }
   if (message === 'upside-down') {
     let rotation = 0;
@@ -54,8 +56,8 @@ chrome.runtime.onMessage.addListener(function(message) {
     }, 30);
   }
   if (message === 'random') {
-    $('*').css('background', colorGen());
-    $('div').css('background', colorGen());
+    $('*').css('background-color', colorGen());
+    $('div').css('background-color', colorGen());
     $('h1').css('color', colorGen());
     $('h2').css('color', colorGen());
     $('h3').css('color', colorGen());
@@ -70,8 +72,8 @@ chrome.runtime.onMessage.addListener(function(message) {
     let rotation = 0;
 
     setInterval(function(){
-      $('*').css('background', colorGen());
-      $('div').css('background', colorGen());
+      $('*').css('background-color', colorGen());
+      $('div').css('background-color', colorGen());
       $('h1').css('color', colorGen());
       $('h2').css('color', colorGen());
       $('h3').css('color', colorGen());
@@ -84,5 +86,8 @@ chrome.runtime.onMessage.addListener(function(message) {
       $('*').css('font-family', "chalkduster");
       $('body').css('transform', `rotate(${rotation += 10}deg)`);
     }, 30);
+  }
+  if (message === 'reset') {
+    location.reload();
   }
 });

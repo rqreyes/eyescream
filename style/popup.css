@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -25,6 +30,10 @@ p {
   color: orangered;
 }
 
+.logo {
+  width: 100px;
+}
+
 #secret {
   text-decoration: none;
 }
@@ -42,13 +51,22 @@ button {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 140px;
+  height: 60px;
   font-size: 16px;
   border: 0;
   border-radius: 5px;
   -webkit-box-shadow: 0 6px grey;
           box-shadow: 0 6px grey;
-  padding: 20px 0;
   margin: 8px 5px;
   position: relative;
   cursor: pointer;
@@ -92,8 +110,8 @@ button:hover {
   color: rgba(0, 0, 0, 0);
 }
 
-#chalkduster {
-  font-family: Chalkduster, fantasy;
+#fonts:hover {
+  font-family: Chalkduster;
 }
 
 #upside-down:hover {
@@ -122,7 +140,7 @@ button:hover {
 }
 
 #party {
-  background: #000 url(../img/party.png) no-repeat center;
+  background: teal url(../img/party.png) no-repeat center;
   background-size: 36%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -130,6 +148,12 @@ button:hover {
 
 #party:hover {
   background-color: purple;
+}
+
+#reset {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 310px;
+          flex: 1 0 310px;
 }
 
 .authors {
