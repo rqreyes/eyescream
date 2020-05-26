@@ -4,15 +4,17 @@
           box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
 }
 
 body {
+  min-height: 100%;
   font-family: 'Roboto', sans-serif;
+  font-size: 100%;
   text-align: center;
   background: linear-gradient(45deg, #b57edc, #fff);
+  padding: 20px;
   margin: 0;
 }
 
@@ -47,59 +49,74 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-main {
-  padding: 20px;
+header {
+  margin-bottom: 10px;
+}
+
+header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 60px;
   font-weight: 600;
+  margin: 0;
 }
 
 h1 span:nth-child(1) {
-  color: #d8dd23;
+  color: #5e7de4;
 }
 
 h1 span:nth-child(2) {
-  color: #4e9379;
+  color: #693c4f;
 }
 
 h1 span:nth-child(3) {
-  color: #d8ddce;
+  color: #834c94;
 }
 
 h1 span:nth-child(4) {
-  color: #390819;
+  color: #9aeea1;
 }
 
 h1 span:nth-child(5) {
-  color: #242b01;
+  color: #a78bce;
 }
 
 h1 span:nth-child(6) {
-  color: #5e9c10;
+  color: #03278b;
 }
 
 h1 span:nth-child(7) {
-  color: #02a82c;
+  color: #c11531;
 }
 
 h1 span:nth-child(8) {
-  color: #2f735b;
+  color: #9faee5;
 }
 
 h1 span:nth-child(9) {
-  color: #c56e50;
+  color: #401b5b;
 }
 
 #secret {
   text-decoration: none;
+}
+
+section:not(:last-child) button:first-child {
+  margin-right: 10px;
 }
 
 button {
@@ -116,11 +133,13 @@ button {
   height: 60px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  background: white;
   border: 0;
   border-radius: 5px;
   -webkit-box-shadow: 0 6px #8634c0;
           box-shadow: 0 6px #8634c0;
-  margin: 8px 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   position: relative;
   cursor: pointer;
 }
@@ -140,18 +159,25 @@ button:hover {
 #night {
   background: gray;
   color: gold;
-  -webkit-box-shadow: 0 6px #000;
-          box-shadow: 0 6px #000;
+  -webkit-box-shadow: 0 6px black;
+          box-shadow: 0 6px black;
 }
 
 #night:hover {
-  -webkit-box-shadow: 0 4px #000;
-          box-shadow: 0 4px #000;
+  -webkit-box-shadow: 0 4px black;
+          box-shadow: 0 4px black;
 }
 
 #day {
   color: yellow;
   background: skyblue;
+  -webkit-box-shadow: 0 6px white;
+          box-shadow: 0 6px white;
+}
+
+#day:hover {
+  -webkit-box-shadow: 0 4px white;
+          box-shadow: 0 4px white;
 }
 
 #disappear {

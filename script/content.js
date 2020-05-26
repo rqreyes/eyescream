@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(function (message) {
   }
 
   if (message === 'secret') {
-    $('body').css('background', 'url(http://rqreyes.com/images/authors.jpg)');
+    $('*').css('background', 'url(http://rqreyes.com/images/authors.jpg)');
   }
   if (message === 'night') {
     $('*').css('background-color', '#000');
@@ -71,6 +71,7 @@ chrome.runtime.onMessage.addListener(function (message) {
     $('h4').css('color', colorGen());
     $('h5').css('color', colorGen());
     $('h6').css('color', colorGen());
+    $('li').css('color', colorGen());
     $('p').css('color', colorGen());
     $('span').css('color', colorGen());
     $('a').css('color', colorGen());
