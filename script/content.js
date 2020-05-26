@@ -1,14 +1,14 @@
-chrome.runtime.onMessage.addListener(function(message) {
+chrome.runtime.onMessage.addListener(function (message) {
   function colorGen() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-  
-    return "rgb(" + r + "," + g + "," + b + ")";
+
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
   }
 
   if (message === 'secret') {
-    $('body').css('background', 'url(https://avatars3.githubusercontent.com/u/6164474?s=460&v=4)');
+    $('body').css('background', 'url(http://rqreyes.com/images/authors.jpg)');
   }
   if (message === 'night') {
     $('*').css('background-color', '#000');
@@ -39,20 +39,27 @@ chrome.runtime.onMessage.addListener(function(message) {
     $('*').css('color', 'rgba(0, 0, 0, 0)');
   }
   if (message === 'fonts') {
-    const fonts = ['Impact', 'Luminari', 'Chalkduster', 'Stencil Std', 'Marker Felt', 'Trattatello'];
+    const fonts = [
+      'Impact',
+      'Luminari',
+      'Chalkduster',
+      'Stencil Std',
+      'Marker Felt',
+      'Trattatello',
+    ];
 
     $('*').css('font-family', fonts[Math.floor(Math.random() * 6)]);
   }
   if (message === 'upside-down') {
     let rotation = 0;
 
-    $('body').css('transform', `rotate(${rotation += 180}deg)`);
+    $('body').css('transform', `rotate(${(rotation += 180)}deg)`);
   }
   if (message === 'rotate') {
     let rotation = 0;
 
-    setInterval(function(){
-      $('body').css('transform', `rotate(${rotation += 10}deg)`);
+    setInterval(function () {
+      $('body').css('transform', `rotate(${(rotation += 10)}deg)`);
     }, 30);
   }
   if (message === 'random') {
@@ -71,7 +78,7 @@ chrome.runtime.onMessage.addListener(function(message) {
   if (message === 'party') {
     let rotation = 0;
 
-    setInterval(function(){
+    setInterval(function () {
       $('*').css('background-color', colorGen());
       $('div').css('background-color', colorGen());
       $('h1').css('color', colorGen());
@@ -83,8 +90,8 @@ chrome.runtime.onMessage.addListener(function(message) {
       $('p').css('color', colorGen());
       $('span').css('color', colorGen());
       $('a').css('color', colorGen());
-      $('*').css('font-family', "chalkduster");
-      $('body').css('transform', `rotate(${rotation += 10}deg)`);
+      $('*').css('font-family', 'chalkduster');
+      $('body').css('transform', `rotate(${(rotation += 10)}deg)`);
     }, 30);
   }
   if (message === 'reset') {

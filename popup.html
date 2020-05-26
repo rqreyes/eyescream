@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>EyeScream</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap">
-  <link rel="stylesheet" href="style/popup.css">
-</head>
-<body>
-  <main>
-    <section>
-      <img class='logo' src='img/logo_128.png' alt='logo'>
-      <a href="#" id="secret"><h1><span class="eye">Eye</span><span>Scream</span></h1></a>
-    </section>
-    <p>version 1.0</p>
-    <section class="night-day">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EyeScream</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+    />
+    <link rel="stylesheet" href="style/popup.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/logo_128.png" alt="logo" />
+      <a href="#" id="secret"
+        ><h1>
+          <span>E</span><span>y</span><span>e</span><span>S</span><span>c</span
+          ><span>r</span><span>e</span><span>a</span><span>m</span>
+        </h1></a
+      >
+    </header>
+    <main>
+      <section class="night-day">
         <button id="night"><i class="fa fa-moon"></i></button>
         <button id="day"><i class="fa fa-sun"></i></button>
-    </section>
-    <section class="disappear-fonts">
+      </section>
+      <section class="disappear-fonts">
         <button id="disappear">Disappear</button>
         <button id="fonts">Fonts</button>
-    </section>
-    <section class="upside-down-rotate">
+      </section>
+      <section class="upside-down-rotate">
         <button id="upside-down">Upside-down</button>
         <button id="rotate">Rotate</button>
-    </section>
-    <section class="random-party">
+      </section>
+      <section class="random-party">
         <button id="random">Random</button>
-        <button id="party"></button>
-    </section>
-    <section class="reset">
+        <button id="party">
+          <img src="./images/party.png" alt="party icon" />
+        </button>
+      </section>
+      <section class="reset">
         <button id="reset">Reset</button>
-    </section>
-    <p class="authors">By Randy and Darren</p>
-  </main>
+      </section>
+      <p class="authors">
+        Made by
+        <a href="https://www.linkedin.com/in/rqreyes/" target="_blank"
+          >Randy Reyes</a
+        >
+        &
+        <a href="https://www.linkedin.com/in/darrendzhu/" target="_blank"
+          >Darren Zhu</a
+        >
+      </p>
+    </main>
 
-  <script src="script/jquery-3.4.1.min.js"></script>
-  <script src="script/popup.js" type="text/javascript"></script>
-</body>
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="script/popup.js" type="text/javascript"></script>
+  </body>
 </html>

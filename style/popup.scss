@@ -1,69 +1,104 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
+// variables
+$theme: #b57edc;
+$theme-dark: darken($theme, 20%);
+
+// general
 * {
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  background: #ccc;
-  padding: 20px;
+  background: linear-gradient(45deg, $theme, #fff);
   margin: 0;
+
+  &::before {
+    content: '';
+    opacity: 0.2;
+    background: url(../images/bg-sprinkles.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    height: 292px;
+    background: url(../images/bg-melt.png) center top;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
+header,
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 20px;
+}
+
+// header
 h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
   font-weight: 600;
-  color: #ab3c3c;
-}
 
-p {
-  color: #222;
-}
-
-.eye {
-  color: #ab3c3c;
-}
-
-.eye {
-  color: orangered;
-}
-
-.logo {
-  width: 100px;
+  span {
+    @for $i from 1 through 9 {
+      &:nth-child(#{$i}) {
+        color: darken(rgb(random(255), random(255), random(255)), 10%);
+      }
+    }
+  }
 }
 
 #secret {
   text-decoration: none;
 }
 
-section {
-  display: flex;
-  justify-content: space-evenly;
-}
-
+// buttons
 button {
-  flex: 1 0 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px;
+  width: 50%;
   height: 60px;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   border: 0;
   border-radius: 5px;
-  box-shadow: 0 6px grey;
+  box-shadow: 0 6px $theme-dark;
   margin: 8px 5px;
   position: relative;
   cursor: pointer;
 
   &:hover {
     top: 2px;
-    box-shadow: 0 4px grey;
+    box-shadow: 0 4px $theme-dark;
   }
 }
 
-#night, #day {
+#night,
+#day {
   font-size: 35px;
   padding: 10px 0;
 }
@@ -79,7 +114,7 @@ button {
 }
 
 #day {
-  color: #fff;
+  color: yellow;
   background: skyblue;
 }
 
@@ -116,25 +151,41 @@ button {
   transition: 0.4s;
 
   &:hover {
-    color: greenyellow;
-    background: navy;
+    color: #ff6766;
+    background: #339a99;
   }
 }
 
 #party {
-  background: teal url(../img/party.png) no-repeat center;
-  background-size: 36%;
+  background-image: radial-gradient(
+    #00013f,
+    #01068d,
+    #8f0cf5,
+    #fe00ea,
+    #ff0178
+  );
   transition: 0.4s;
 
   &:hover {
-    background-color: purple;
+    background-image: radial-gradient(
+      #ff0178,
+      #fe00ea,
+      #8f0cf5,
+      #01068d,
+      #00013f
+    );
+  }
+
+  img {
+    height: 40px;
   }
 }
 
-#reset {
-  flex: 1 0 310px;
-}
-
+// authors
 .authors {
   margin: 20px 0 0;
+
+  a {
+    color: inherit;
+  }
 }
